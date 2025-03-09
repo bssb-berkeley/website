@@ -15,12 +15,15 @@
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-            height: 230vh;
+            min-height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
             color: #333;
             padding: 20px;
+
+            margin: 0;                /* Remove default margin */
+            background-color: #f4f4f4; /* Optional background color */
         }
         
         .container {
@@ -57,6 +60,32 @@
             color: #555;
         }
         
+        .grid-container {
+            margin: 0 auto; /* Centers the grid horizontally */
+            display: grid;
+            grid-template-columns: repeat(2, 1fr); /* 2 equal columns */
+            grid-template-rows: repeat(3, 1fr); /* 3 equal rows */
+            gap: 20px; /* Space between images */
+            width: 600px; /* Adjust the container width */
+            height: 800px; /* Adjust the container height */
+            justify-content: center; /* Ensures grid items are centered */
+        }
+        .grid-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Ensures images fit nicely */
+        }
+
+        .grid-container img:nth-child(5) {
+            grid-column: 1 / 3; /* Forces the image to be centered in both columns */
+            justify-self: center; /* Aligns it properly */
+        }
+
+        /* Optional: Make the last image span two columns */
+        /*.grid-container img:last-child {
+            grid-column: span 2;
+        }*/
+
         h1 {
             font-size: 3rem;
             margin: 20px 0;
@@ -125,6 +154,19 @@
         <br>    
         <h3>We sincerely appreciate your generous donation</h3>
 
+        <br>
+        <br>
+
+        <h2>Ekushe February and Pohela Falgun Celebration</h2>
+        <br>
+
+        <div class="grid-container">
+            <img src="Feb21_img1.jpg" alt="Image 1">
+            <img src="Feb21_img2.jpg" alt="Image 2">
+            <img src="Feb21_img3.jpg" alt="Image 3">
+            <img src="Feb21_img4.jpg" alt="Image 4">
+            <img src="Feb21_img5.jpg" alt="Image 5">
+        </div>
         <br>
         <br>
         <p>
